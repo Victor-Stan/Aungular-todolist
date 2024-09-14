@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let todo of todos" class="flex items-center mb-2">
+      <input type="checkbox" [checked]="todo.completed" (change)="onToggleComplete(todo.id)" class="mr-2">
+      <span [class.line-through]="todo.completed">{{ todo.title }}</span>
+      <button (click)="onDelete(todo.id)" class="ml-auto bg-red-500 text-white p-1 rounded">Delete</button>
+    </li>
+  </ul>
